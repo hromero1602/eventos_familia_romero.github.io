@@ -1,192 +1,107 @@
-/* Reset básico */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #fff8f0;
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fef6f6;
+  color: #333;
+  text-align: center;
 }
 
 header {
-    background-color: #ff7e8d;
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
+  background: #ff8fab;
+  color: white;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1em;
-    padding: 5px 10px;
-    transition: background 0.2s;
-    border-radius: 5px;
-}
-
-nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
 main {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.tab {
-    display: none;
-}
-
-.tab.active {
-    display: block;
-    animation: fadeIn 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.profile-pic {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto;
-    border: 4px solid #ff7e8d;
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 500px;
-    margin: 0 auto;
-    background: #fff0f5;
-    padding: 20px;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-input[type="text"],
-textarea {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
-}
-
-input[type="file"] {
-    font-size: 1em;
+input, textarea, button {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
 }
 
 button {
-    background-color: #ff7e8d;
-    color: white;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
-    font-size: 1em;
-    border-radius: 5px;
-    transition: background 0.3s;
+  background: #ff8fab;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
-    background-color: #ff5e6d;
+  background: #e05780;
 }
 
-#mensajesEnviados {
-    margin-top: 30px;
+#messageList {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.mensaje {
-    background-color: #ffe5ec;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+.message {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-align: left;
 }
 
-.mensaje img {
-    max-width: 100px;
-    display: block;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-section h2 {
-    margin-bottom: 15px;
-    text-align: center;
-    color: #d60043;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
+.message img {
+  max-width: 100px;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ff7e8d;
-    color: white;
-    margin-top: 40px;
+  background: #ff8fab;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
-/* 📱 Responsive para pantallas pequeñas */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5em;
-    }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
-    .profile-pic {
-        width: 150px;
-        height: 150px;
-    }
-
-    form {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .mensaje img {
-        max-width: 80px;
-    }
-
-    section h2 {
-        font-size: 1.3em;
-    }
+/* Responsive */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #personInfo {
+    grid-column: span 1;
+  }
+  #messages {
+    grid-column: span 1;
+  }
+  #eventInfo {
+    grid-column: span 1;
+  }
 }
