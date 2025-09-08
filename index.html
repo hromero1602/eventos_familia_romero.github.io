@@ -1,67 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>¡Feliz Cumpleaños!</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiesta de Cumpleaños</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>🎉 ¡Feliz Cumpleaños, Camila! 🎂</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio" onclick="showTab('inicio')">Conoce a Camila</a></li>
-                <li><a href="#mensaje" onclick="showTab('mensaje')">Deja tu Mensaje</a></li>
-                <li><a href="#evento" onclick="showTab('evento')">Sobre el Evento</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>🎉 Fiesta de Cumpleaños 🎂</h1>
+    <p>Selecciona a quién vamos a celebrar</p>
+    <select id="personSelector">
+      <option value="camila">Camila</option>
+      <option value="lucas">Lucas</option>
+    </select>
+  </header>
 
-    <main>
-        <!-- Tab 1: Conoce a Camila -->
-        <section id="inicio" class="tab active">
-            <img src="camila.jpg" alt="Foto de Camila" class="profile-pic">
-            <h2>¿Quién es Camila?</h2>
-            <p>Camila es una persona increíble, amante de los libros, los gatos y la buena comida. Hoy celebra un año más de vida y queremos que sea inolvidable.</p>
-        </section>
+  <main>
+    <section id="personInfo" class="card"></section>
 
-        <!-- Tab 2: Deja tu mensaje -->
-        <section id="mensaje" class="tab">
-            <h2>💌 Deja tu mensaje para Camila</h2>
-            <form id="mensajeForm">
-                <label for="nombre">Tu nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+    <section id="messages" class="card">
+      <h2>Deja tu mensaje ✨</h2>
+      <form id="messageForm">
+        <input type="text" id="name" placeholder="Tu nombre" required />
+        <textarea id="message" placeholder="Escribe tu mensaje" required></textarea>
+        <input type="file" id="photo" accept="image/*" />
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="messageList"></div>
+    </section>
 
-                <label for="mensaje">Tu mensaje:</label>
-                <textarea id="mensajeTexto" name="mensaje" required></textarea>
+    <section id="eventInfo" class="card">
+      <h2>📅 Información del Evento</h2>
+      <p><strong>Fecha:</strong> 15 de Septiembre, 2025</p>
+      <p><strong>Lugar:</strong> Salón Alegría, CDMX</p>
+      <p><strong>Hora:</strong> 6:00 PM</p>
+    </section>
+  </main>
 
-                <label for="foto">Sube una foto (opcional):</label>
-                <input type="file" id="foto" accept="image/*">
-
-                <button type="submit">Enviar 🎁</button>
-            </form>
-
-            <div id="mensajesEnviados"></div>
-        </section>
-
-        <!-- Tab 3: Información del Evento -->
-        <section id="evento" class="tab">
-            <h2>🎊 Detalles del Cumpleaños</h2>
-            <ul>
-                <li><strong>Fecha:</strong> Sábado 14 de Septiembre</li>
-                <li><strong>Hora:</strong> 6:00 PM</li>
-                <li><strong>Lugar:</strong> Jardín Los Cipreses, Av. Siempreviva 742</li>
-                <li><strong>Temática:</strong> Fiesta tropical 🌺🍹</li>
-                <li><strong>Dress code:</strong> Ropa colorida y cómoda</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Hecho con 💖 para Camila | 2025</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <footer>
+    <p>Hecho con 💖 para celebrar</p>
+  </footer>
 </body>
 </html>
-
