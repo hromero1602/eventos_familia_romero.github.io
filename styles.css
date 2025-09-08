@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff8f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #ff7e8d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.profile-pic {
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #ff7e8d;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff5e6d;
+}
+
+#mensajesEnviados {
+    margin-top: 30px;
+}
+
+.mensaje {
+    background-color: #ffe5ec;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.mensaje img {
+    max-width: 100px;
+    display: block;
+    margin-top: 10px;
+}
