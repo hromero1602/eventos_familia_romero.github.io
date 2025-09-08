@@ -1,1 +1,67 @@
-<h1>Web Familia Romero</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¡Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🎉 ¡Feliz Cumpleaños, Camila! 🎂</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio" onclick="showTab('inicio')">Conoce a Camila</a></li>
+                <li><a href="#mensaje" onclick="showTab('mensaje')">Deja tu Mensaje</a></li>
+                <li><a href="#evento" onclick="showTab('evento')">Sobre el Evento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Tab 1: Conoce a Camila -->
+        <section id="inicio" class="tab active">
+            <img src="camila.jpg" alt="Foto de Camila" class="profile-pic">
+            <h2>¿Quién es Camila?</h2>
+            <p>Camila es una persona increíble, amante de los libros, los gatos y la buena comida. Hoy celebra un año más de vida y queremos que sea inolvidable.</p>
+        </section>
+
+        <!-- Tab 2: Deja tu mensaje -->
+        <section id="mensaje" class="tab">
+            <h2>💌 Deja tu mensaje para Camila</h2>
+            <form id="mensajeForm">
+                <label for="nombre">Tu nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="mensaje">Tu mensaje:</label>
+                <textarea id="mensajeTexto" name="mensaje" required></textarea>
+
+                <label for="foto">Sube una foto (opcional):</label>
+                <input type="file" id="foto" accept="image/*">
+
+                <button type="submit">Enviar 🎁</button>
+            </form>
+
+            <div id="mensajesEnviados"></div>
+        </section>
+
+        <!-- Tab 3: Información del Evento -->
+        <section id="evento" class="tab">
+            <h2>🎊 Detalles del Cumpleaños</h2>
+            <ul>
+                <li><strong>Fecha:</strong> Sábado 14 de Septiembre</li>
+                <li><strong>Hora:</strong> 6:00 PM</li>
+                <li><strong>Lugar:</strong> Jardín Los Cipreses, Av. Siempreviva 742</li>
+                <li><strong>Temática:</strong> Fiesta tropical 🌺🍹</li>
+                <li><strong>Dress code:</strong> Ropa colorida y cómoda</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hecho con 💖 para Camila | 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
