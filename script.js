@@ -1,4 +1,6 @@
-const personSelector = document.getElementById("personSelector");
+const slider = document.getElementById("slider");
+const details = document.getElementById("details");
+const backButton = document.getElementById("backButton");
 const personInfo = document.getElementById("personInfo");
 const messageForm = document.getElementById("messageForm");
 const messageList = document.getElementById("messageList");
@@ -20,15 +22,29 @@ function updatePerson(personKey) {
   const person = people[personKey];
   personInfo.innerHTML = `
     <h2>🎂 Hoy celebramos a ${person.name} 🎂</h2>
-    <img src="${person.image}" alt="${person.name}" style="max-width:200px; border-radius:1rem;" />
+    <img src="${person.image}" alt="${person.name}" style="max-width:200px; border-radius:1rem; border:3px solid #d4af37;" />
     <p>${person.description}</p>
   `;
 }
 
-personSelector.addEventListener("change", (e) => {
-  updatePerson(e.target.value);
+// Evento: clic en una tarjeta del slider
+document.querySelectorAll(".slide").forEach(slide => {
+  slide.addEventListener("click", () => {
+    const person = slide.dataset.person;
+    updatePerson(person);
+    slider.classList.add("hidden");
+    details.classList.remove("hidden");
+  });
 });
 
+// Evento: volver al slider
+backButton.addEventListener("click", () => {
+  details.classList.add("hidden");
+  slider.classList.remove("hidden");
+  messageList.innerHTML = ""; // limpiar mensajes si se cambia de persona
+});
+
+// Enviar mensaje
 messageForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
@@ -52,6 +68,3 @@ messageForm.addEventListener("submit", (e) => {
   messageList.appendChild(messageDiv);
   messageForm.reset();
 });
-
-// Inicializar con Camila
-updatePerson("camila");
