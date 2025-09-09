@@ -8,7 +8,9 @@ body {
   text-align: center;
 }
 
-/* Encabezado estilo real */
+.hidden { display: none !important; }
+
+/* Encabezado */
 header {
   background: linear-gradient(135deg, #1a2a6c, #2e3b8e);
   color: white;
@@ -16,17 +18,14 @@ header {
   border-bottom: 5px solid #d4af37;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
 header h1 {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
+  font-size: 2.2rem;
 }
-
 header p {
   margin: 0.5rem 0 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: italic;
 }
 
@@ -39,9 +38,8 @@ header p {
   scroll-snap-type: x mandatory;
   justify-content: center;
 }
-
 .slide {
-  min-width: 280px;
+  min-width: 260px;
   flex: none;
   background: white;
   border-radius: 1rem;
@@ -52,22 +50,20 @@ header p {
   transition: transform 0.3s, box-shadow 0.3s;
   scroll-snap-align: center;
   padding: 1rem;
+  outline: none;
 }
-
 .slide img {
   max-width: 100%;
   border-radius: 1rem;
   border: 3px solid #d4af37;
 }
-
 .slide h2 {
   font-family: 'Playfair Display', serif;
   color: #1a2a6c;
   margin-top: 0.5rem;
 }
-
 .slide:hover {
-  transform: scale(1.07);
+  transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
@@ -77,10 +73,10 @@ header p {
   border-radius: 1rem;
   border: 2px solid #d4af37;
   padding: 1.5rem;
+  margin: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   animation: fadeIn 0.6s ease-in-out;
 }
-
 .card h2 {
   font-family: 'Playfair Display', serif;
   color: #1a2a6c;
@@ -93,14 +89,12 @@ form {
   flex-direction: column;
   gap: 0.8rem;
 }
-
 input, textarea, button {
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   font-family: 'Poppins', sans-serif;
 }
-
 button {
   background: linear-gradient(135deg, #d4af37, #b3952e);
   color: white;
@@ -109,7 +103,6 @@ button {
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
 }
-
 button:hover {
   background: linear-gradient(135deg, #e0c75e, #a6861d);
   transform: scale(1.03);
@@ -122,7 +115,6 @@ button:hover {
   flex-direction: column;
   gap: 1rem;
 }
-
 .message {
   border: 1px solid #d4af37;
   border-radius: 0.5rem;
@@ -131,7 +123,6 @@ button:hover {
   text-align: left;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
 .message img {
   max-width: 120px;
   border-radius: 0.5rem;
@@ -141,20 +132,17 @@ button:hover {
 
 /* Botón volver */
 #backButton {
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   padding: 0.6rem 1.2rem;
-  border: none;
   background: linear-gradient(135deg, #1a2a6c, #2e3b8e);
   color: white;
   font-weight: bold;
+  border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
 }
-
 #backButton:hover {
   background: linear-gradient(135deg, #2e3b8e, #1a2a6c);
-  transform: scale(1.03);
 }
 
 /* Footer */
@@ -164,10 +152,9 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
   font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  border-top: 3px solid #d4af37;
 }
 
+/* Animación */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
