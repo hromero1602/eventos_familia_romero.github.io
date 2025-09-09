@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,4 +23,41 @@
     </div>
     <div class="slide" data-person="lucas" tabindex="0" role="button" aria-label="Ver evento de Lucas">
       <img src="data/lucas.jpg" alt="Lucas" />
-      <h2>Cel
+      <h2>Celebramos a Lucas</h2>
+    </div>
+  </section>
+
+  <!-- DETALLES DEL EVENTO -->
+  <main id="details" class="hidden" aria-live="polite">
+    <button id="backButton">⬅ Volver</button>
+
+    <!-- Información de la persona -->
+    <section id="personInfo" class="card"></section>
+
+    <!-- Mensajes -->
+    <section id="messages" class="card hidden">
+      <h2>Deja tu mensaje ✨</h2>
+      <form id="messageForm">
+        <input type="text" id="name" placeholder="Tu nombre" required />
+        <textarea id="message" placeholder="Escribe tu mensaje" required></textarea>
+        <input type="file" id="photo" accept="image/*" />
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="messageList"></div>
+    </section>
+
+    <!-- Información del evento -->
+    <section id="eventInfo" class="card hidden">
+      <h2>📅 Información del Evento</h2>
+      <p><strong>Fecha:</strong> 25 de Diciembre, 2025</p>
+      <p><strong>Lugar:</strong> Palacio Real, CDMX</p>
+      <p><strong>Hora:</strong> 8:00 PM</p>
+      <p><strong>Dress code:</strong> Elegante</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hecho con 💖 para celebrar</p>
+  </footer>
+</body>
+</html>

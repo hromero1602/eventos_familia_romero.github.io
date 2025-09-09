@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <img src="${person.image}" alt="${person.name}" style="max-width:200px; border-radius:1rem; border:3px solid #d4af37;" />
       <p>${person.description}</p>
     `;
-    // Mostrar secciones
+    // Mostrar secciones ocultas
     messagesSection.classList.remove('hidden');
     eventInfo.classList.remove('hidden');
   }
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     details.classList.remove('hidden');
   });
 
+  // Teclado accesible
   slider.addEventListener('keydown', (e) => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     const card = e.target.closest('.slide');
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     details.classList.remove('hidden');
   });
 
-  // Volver al slider
+  // Volver
   backButton.addEventListener('click', () => {
     details.classList.add('hidden');
     slider.classList.remove('hidden');
